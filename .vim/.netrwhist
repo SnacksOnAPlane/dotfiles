@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/smiley/zviewer_rss/thirdparty/socialregistration/templatetags'
+let g:netrw_dirhist_2='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim'
+let g:netrw_dirhist_3='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim/ftplugin'
+let g:netrw_dirhist_4='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim/ftplugin/python'
+let g:netrw_dirhist_5='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim'
