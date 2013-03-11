@@ -19,7 +19,7 @@ else
 	ru! indent/javascript.vim
 endif
 
-echo "Sourcing html indent"
+" echo "Sourcing html indent"
 
 
 " [-- local settings (must come before aborting the script) --]
@@ -86,6 +86,7 @@ call <SID>HtmlIndentPush('object')
 call <SID>HtmlIndentPush('ol')
 call <SID>HtmlIndentPush('optgroup')
 " call <SID>HtmlIndentPush('pre')
+call <SID>HtmlIndentPush('p')
 call <SID>HtmlIndentPush('q')
 call <SID>HtmlIndentPush('s')
 call <SID>HtmlIndentPush('samp')

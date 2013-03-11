@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/smiley/zviewer_rss/thirdparty/socialregistration/templatetags'
-let g:netrw_dirhist_2='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim'
-let g:netrw_dirhist_3='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim/ftplugin'
-let g:netrw_dirhist_4='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim/ftplugin/python'
-let g:netrw_dirhist_5='/home/smiley/dotfiles/.vim/bundle/pyflakes-vim'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/mnt/stuff/mylibrary/app/assets/javascripts/backbone/views'
+let g:netrw_dirhist_2='/mnt/stuff/mylibrary/app/assets/javascripts/backbone/views/books'
+let g:netrw_dirhist_3='/mnt/projects/tabs/script'
+let g:netrw_dirhist_4='/mnt/projects/tabs'
+let g:netrw_dirhist_5='/mnt/projects/tabs/db'
+let g:netrw_dirhist_6='spec'
+let g:netrw_dirhist_7='spec/controllers'
+let g:netrw_dirhist_8='spec/controllers/api'
+let g:netrw_dirhist_9='/mnt/projects/accounts/app/assets/javascripts/views/resources'
