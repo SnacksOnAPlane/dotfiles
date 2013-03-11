@@ -1,7 +1,7 @@
 " Set syntax on
 syntax on
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 let g:pyflakes_use_quickfix = 0
 
 set backupdir=~/tmp
@@ -62,6 +62,9 @@ set tabstop=2
 au BufRead,BufNewFile *.py,*.pyw,*.js set expandtab
 au BufRead,BufNewFile *.c,*.h set noexpandtab
 au BufRead,BufNewFile Makefile* set noexpandtab
+au BufRead,BufNewFile *.coffee set noexpandtab
+au BufRead,BufNewFile *.md set expandtab
+au BufRead,BufNewFile *.scss set expandtab
 
 " Turn off settings in 'formatoptions' relating to comment formatting.
 " - c : do not automatically insert the comment leader when wrapping based on
@@ -107,11 +110,12 @@ function! JumpAndSwap()
 	let g:jmpToBuffer = currBuf
 endfunction
 
+nmap <F9>  :FufRenewCache<CR>
 nmap <F10> :call JumpAndSwap()<CR>
 nmap <F11> :bprevious<CR>
 nmap <F12> :bnext<CR>
 
-nmap <F5> :FuzzyFinderTextMate<CR>
+nmap <F5> :FufCoverageFile<CR>
 "nmap <F6> :grep --js --xul <cword><CR>
 "nmap <F7> :grep -a <cword><CR>
 nmap <F8> :call FindParentFolds()<CR>
@@ -218,3 +222,15 @@ augroup objective-j
 au! BufRead,BufNewFile *.j set filetype=objective-j
 au! Syntax objective-j source /home/rsmiley/.vim/plugin/objj.vim
 augroup END
+
+au! BufRead,BufNewFile *.json set filetype=json 
+
+augroup json_autocmd 
+  autocmd! 
+  autocmd FileType json set autoindent 
+  autocmd FileType json set formatoptions=tcq2l 
+  autocmd FileType json set textwidth=78 shiftwidth=2 
+  autocmd FileType json set softtabstop=2 tabstop=8 
+  autocmd FileType json set expandtab 
+  autocmd FileType json set foldmethod=syntax 
+augroup END 
