@@ -116,6 +116,7 @@ nmap <F11> :bprevious<CR>
 nmap <F12> :bnext<CR>
 
 nmap <F5> :FufCoverageFile<CR>
+nmap <F6> :NERDTreeToggle<CR>
 "nmap <F6> :grep --js --xul <cword><CR>
 "nmap <F7> :grep -a <cword><CR>
 nmap <F8> :call FindParentFolds()<CR>
@@ -234,3 +235,17 @@ augroup json_autocmd
   autocmd FileType json set expandtab 
   autocmd FileType json set foldmethod=syntax 
 augroup END 
+
+" don't select pasted-over text on paste
+xnoremap p pgvy
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+if exists("+colorcolumn")
+	set colorcolumn=80
+endif

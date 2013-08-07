@@ -3,3 +3,5 @@
 --type-set=scss=.scss
 --type-set=erb=.erb
 --type-set=csvbuilder=.csvbuilder
+--type-set=coffee=.coffee
+--type-set=pgsql=.pgsql
