@@ -20,6 +20,7 @@ set smartcase
 set hls
 set incsearch
 set hidden
+set ruler
 
 " Wrap text instead of being on one line
 set lbr
@@ -65,6 +66,10 @@ au BufRead,BufNewFile Makefile* set noexpandtab
 au BufRead,BufNewFile *.coffee set noexpandtab
 au BufRead,BufNewFile *.md set expandtab
 au BufRead,BufNewFile *.scss set expandtab
+au BufRead,BufNewFile *.rb set expandtab
+au BufRead,BufNewFile *.pgsql set expandtab
+au BufRead,BufNewFile *.coffee set expandtab
+au BufNewFile,BufRead *.ejs set filetype=html expandtab
 
 " Turn off settings in 'formatoptions' relating to comment formatting.
 " - c : do not automatically insert the comment leader when wrapping based on
@@ -190,9 +195,10 @@ function! JavaScriptFold()
     setl foldtext=FoldText()
 endfunction
 
-set foldcolumn=2
+set foldcolumn=0
 
-au FileType javascript call JavaScriptFold()
+"au FileType javascript call JavaScriptFold()
+set nofoldenable
 au FileType javascript setl fen
 
 function! CloseHiddenBuffers()
